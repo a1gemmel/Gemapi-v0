@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import web
 import requests
 
@@ -16,5 +17,5 @@ class proxy:
 			print r;
 			return r.text;
 
-if __name__ == "__main__":
-    app.run()
+def application():
+	app.run()
