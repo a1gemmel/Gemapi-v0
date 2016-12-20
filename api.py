@@ -6,16 +6,16 @@ urls = (
 	'/proxy/(.*)', 'proxy',
 )
 
-app = web.application(urls, globals())
+app = web.application(urls, globals()).wsgifunc()
 
 class proxy:
 	def GET(self, url):
 		if not url:
 			return 'Usage: /proxy/www.google.com to return www.google.com'
 		else:
-			r = requests.get('http://' + url);
-			print r;
-			return r.text;
+			try:
+				r = requests.get('http://' + url)
+				return r.text
+			except:
+				return 'oops'
 
-def application():
-	app.run()
