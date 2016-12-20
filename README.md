@@ -17,3 +17,7 @@ This is where I throw the serverside stuff for whatever I'm working on. Right no
 # Oh, ok.
 
 Yeah, not as cool as you were expecting.
+
+# How to use it:
+
+Don't.
